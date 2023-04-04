@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+  --main-transition: 0.3s;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+}
+
+p {
+  font-size: 16px;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../images/pattern-background-mobile.svg");
+  background-size: cover;
+  background-color: var(--pale-blue);
+}
+
+@media (min-width: 768px) {
+  main {
+    background-image: url("../images/pattern-background-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
+}
+
+.parent {
+  width: 400px;
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  text-align: center;
+  padding-bottom: 35px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 15%);
+}
+
+.parent .info {
+  padding: 20px;
+  border-radius: inherit;
+}
+
+.parent > img {
+  max-width: 100%;
+}
+
+.parent h1 {
+  font-size: 25px;
+  color: var(--dark-blue);
+}
+
+.parent p {
+  color: var(--desaturated-blue);
+  padding: 0px 15px;
+  line-height: 1.4;
+}
+
+.parent .plan {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--very-pale-blue);
+  padding: 20px 15px;
+  border-radius: inherit;
+}
+
+.parent .plan img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  align-self: flex-start;
+}
+
+.parent .plan .text {
+  margin-right: 25px;
+  margin-top: -10px;
+}
+
+.parent .plan a {
+  color: var(--bright-blue);
+  font-weight: bold;
+}
+
+.parent .plan a:hover {
+  text-decoration: none;
+}
+
+.parent .plan h2 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.parent .plan span {
+  color: var(--desaturated-blue);
+}
+
+.parent .info > a {
+  display: block;
+  margin-top: 25px;
+  color: var(--desaturated-blue);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.parent .info > a:first-of-type {
+  color: white;
+  background-color: var(--bright-blue);
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0px 25px 15px #dcdcf6;
+  transition: background-color var(--main-transition);
+}
+
+.parent .info > a:first-of-type:hover {
+  background-color: hsl(245, 83%, 69%);
+}
+
+.parent .info > a:last-of-type:hover {
+  color: hsl(229, 19%, 35%);
+  transition: color var(--main-transition);
+}
